@@ -9,6 +9,7 @@ Welcome to my GitHub! I'm passionate about creating intuitive, high-quality web 
 ### 🎯 Goals for 2025  
 - 🌐 Contribute to open-source projects  
 - 💡 Learn about **blockchain technologies** ✅
+- 💪 Build a component libary
 
 ### 🌍 Languages I Speak  
 - 🇩🇪 **German** (Native)  
