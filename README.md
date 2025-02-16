@@ -1,6 +1,5 @@
 # Hi, I'm Marc 👋  
 ### Software Engineer
-[Portfolio](https://marc-blattmann.vercel.app)
 
 Welcome to my GitHub! I'm passionate about creating intuitive, high-quality web applications. Whether it's building sleek front-end designs or tackling complex back-end challenges, I'm always eager to learn and improve my skills.  
 
@@ -14,4 +13,6 @@ Welcome to my GitHub! I'm passionate about creating intuitive, high-quality web 
 
 ### 🌍 Languages I Speak  
 - 🇩🇪 **German** (Native)  
-- 🇬🇧 **English** (Fluent)   
+- 🇬🇧 **English** (Fluent)
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/X7X51AOINQ)
