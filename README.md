@@ -13,3 +13,4 @@ Welcome to my GitHub! I'm passionate about creating intuitive, high-quality web 
 - 🇬🇧 **English** (Fluent)
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/X7X51AOINQ)
+
