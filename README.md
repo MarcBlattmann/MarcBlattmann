@@ -7,4 +7,4 @@ Welcome to my GitHub! I'm passionate about creating intuitive, high-quality web 
 - 🇩🇪 **German** (Native)  
 - 🇬🇧 **English** (Fluent)
 
-<img alt="image" src="https://github.com/user-attachments/assets/47e4723c-5c72-4f59-a5c6-2aed8df6eee4" />
+<img alt="image" src="https://github.com/user-attachments/assets/47e4723c-5c72-4f59-a5c6-2aed8df6eee4&theme=transparent" />
