@@ -7,4 +7,4 @@ Welcome to my GitHub! I'm passionate about creating intuitive, high-quality web 
 - 🇩🇪 **German** (Native)  
 - 🇬🇧 **English** (Fluent)
 
-<img alt="image" src="https://github.com/user-attachments/assets/47e4723c-5c72-4f59-a5c6-2aed8df6eee4&theme=transparent" />
+<img alt="image" src="https://github-readme-stats.hackclub.dev/api/wakatime?username=14879&api_domain=hackatime.hackclub.com&&custom_title=Hackatime+Stats&layout=compact&cache_seconds=0&langs_count=8&theme=transparent" />
