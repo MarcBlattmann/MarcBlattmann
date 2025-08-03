@@ -6,3 +6,5 @@ Welcome to my GitHub! I'm passionate about creating intuitive, high-quality web 
 ### 🌍 Languages I Speak  
 - 🇩🇪 **German** (Native)  
 - 🇬🇧 **English** (Fluent)
+
+<img width="495" height="115" alt="image" src="https://github.com/user-attachments/assets/47e4723c-5c72-4f59-a5c6-2aed8df6eee4" />
