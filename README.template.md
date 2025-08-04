@@ -9,4 +9,4 @@ Welcome to my GitHub! I'm passionate about creating intuitive, high-quality web 
 
 ### 💻 Most Used Coding Languages (last 7 days)
 
-{{ wakatimeDoubleCategoryBar "💾 Languages:" wakatimeData.Languages }}
+{{ wakatimeCategoryBar "💾 Languages:" wakatimeData.Languages 5 }}
