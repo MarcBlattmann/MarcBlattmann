@@ -24,6 +24,11 @@ jobs:
         env:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
         run: |
+          # Test the API directly first
+          echo "Testing Hackatime API..."
+          curl -H "Authorization: Bearer ${{ secrets.WAKATIME_API_KEY }}" \
+               "https://hackatime.hackclub.com/api/hackatime/v1/users/current/stats/last_7_days" || echo "API test failed"
+          
           # Create wakatime config file for Hackatime
           cat > ~/.wakatime.cfg << EOF
           [settings]
@@ -31,10 +36,10 @@ jobs:
           api_key = ${{ secrets.WAKATIME_API_KEY }}
           heartbeat_rate_limit_seconds = 30
           EOF
-          # Debug: show the config file
-          cat ~/.wakatime.cfg
-          # Try with explicit config file path
-          WAKATIME_CONFIG_FILE=~/.wakatime.cfg $HOME/go/bin/markscribe -write README.md README.template.md
+          
+          # Try running markscribe with debug info
+          echo "Running markscribe..."
+          $HOME/go/bin/markscribe -write README.md README.template.md
 
       - name: Commit and Push if Changed
         run: |
