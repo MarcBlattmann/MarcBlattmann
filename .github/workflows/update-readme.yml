@@ -87,7 +87,7 @@ jobs:
                   
                   # Ensure consistent alignment by padding language name to exactly 12 characters
                   padded_name = f"{name:<12}"
-                  stats_content += f"{emoji} {padded_name} ▐{bar}▌ {percent:4.1f}% ({time_text})\n"
+                  stats_content += f"{emoji} {padded_name} {bar} {percent:4.1f}% ({time_text})\n"
               
               stats_content += "```\n"
               
