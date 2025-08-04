@@ -59,15 +59,9 @@ jobs:
                   time_text = lang['text']
                   
                   # Create a better looking progress bar
-                  # Debug: print the actual percentage value
-                  print(f"Debug: {name} has {percent}% usage")
-                  
-                  # Scale percentage properly - percent is already like 79.6, not 0.796
                   filled = min(int((percent / 100) * 20), 20)  # Cap at 20 chars max
                   empty = 20 - filled
-                  bar = '█' * filled + '░' * empty
-                  
-                  print(f"Debug: {name} -> filled={filled}, empty={empty}, bar={bar}")
+                  bar = '■' * filled + '□' * empty
                   
                   # Format with proper spacing and emojis
                   if name == 'TypeScript':
