@@ -18,7 +18,7 @@ jobs:
           go-version: '1.21'
 
       - name: Install Markscribe
-        run: go install github.com/muesli/markscribe@latest
+        run: go install github.com/taciturnaxolotl/markscribe@latest
 
       - name: Generate README
         env:
