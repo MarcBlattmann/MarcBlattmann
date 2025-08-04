@@ -85,7 +85,7 @@ jobs:
                   else:
                       emoji = '📄'
                   
-                  stats_content += f"{emoji} **{name}**{' ' * (12 - len(name))}▐{bar}▌ {percent:4.1f}% ({time_text})\n"
+                  stats_content += f"{emoji} **{name}**{' ' * (12 - len(name))}▐{bar}▌ {percent:4.1f}% ({time_text})  \n"
               
               print("Generated stats content:")
               print(stats_content)
