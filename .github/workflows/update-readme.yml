@@ -1,0 +1,35 @@
+name: Update README
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # Every hour
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: '1.21'
+
+      - name: Install Markscribe
+        run: go install github.com/muesli/markscribe@latest
+
+      - name: Generate README
+        env:
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+        run: |
+          $HOME/go/bin/markscribe -template README.template.md -output README.md
+
+      - name: Commit and Push if Changed
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add README.md
+          git diff --cached --quiet || git commit -m "chore: update README"
+          git push
