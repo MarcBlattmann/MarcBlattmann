@@ -51,7 +51,7 @@ jobs:
               print(f"Found {len(languages)} languages")
               
               # Create language bars
-              stats_content = "### 💻 Most Used Coding Languages (last 7 days)\n\n```\n"
+              stats_content = "### 🤯 What I did the last 7 days\n\n```\n"
               
               for lang in languages[:5]:  # Top 5 languages
                   name = lang['name']
