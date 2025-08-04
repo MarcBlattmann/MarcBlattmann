@@ -85,9 +85,9 @@ jobs:
                   else:
                       emoji = '📄'
                   
-                  # Ensure consistent alignment by padding language name to 12 characters
-                  padded_name = f"{name:<12}"
-                  stats_content += f"{emoji} **{padded_name}** ▐{bar}▌ {percent:4.1f}% ({time_text})  \n"
+                  # Ensure consistent alignment by padding language name to exactly 15 characters
+                  padded_name = f"{name:<15}"
+                  stats_content += f"{emoji} {padded_name} ▐{bar}▌ {percent:4.1f}% ({time_text})  \n"
               
               print("Generated stats content:")
               print(stats_content)
