@@ -58,11 +58,34 @@ jobs:
                   percent = lang['percent']
                   time_text = lang['text']
                   
-                  # Create a simple progress bar
+                  # Create a better looking progress bar
                   filled = int(percent / 5)  # Scale to 20 chars max
-                  bar = '█' * filled + '░' * (20 - filled)
+                  empty = 20 - filled
+                  bar = '█' * filled + '░' * empty
                   
-                  stats_content += f"{name:<12} `{bar}` {percent:5.1f}% ({time_text})\n"
+                  # Format with proper spacing and emojis
+                  if name == 'TypeScript':
+                      emoji = '🔷'
+                  elif name == 'JavaScript':
+                      emoji = '🟨'
+                  elif name == 'Python':
+                      emoji = '🐍'
+                  elif name == 'CSS':
+                      emoji = '🎨'
+                  elif name == 'HTML':
+                      emoji = '🌐'
+                  elif name == 'Java':
+                      emoji = '☕'
+                  elif name == 'C#':
+                      emoji = '🔷'
+                  elif name == 'YAML':
+                      emoji = '⚙️'
+                  elif name == 'Markdown':
+                      emoji = '📝'
+                  else:
+                      emoji = '📄'
+                  
+                  stats_content += f"{emoji} **{name}**{' ' * (12 - len(name))}▐{bar}▌ {percent:4.1f}% ({time_text})\n"
               
               print("Generated stats content:")
               print(stats_content)
