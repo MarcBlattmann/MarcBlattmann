@@ -24,22 +24,93 @@ jobs:
         env:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
         run: |
-          # Test the API directly first
-          echo "Testing Hackatime API..."
-          curl -H "Authorization: Bearer ${{ secrets.WAKATIME_API_KEY }}" \
-               "https://hackatime.hackclub.com/api/hackatime/v1/users/current/stats/last_7_days" || echo "API test failed"
+          # Fetch Hackatime data and create custom stats
+          echo "Fetching Hackatime data..."
+          STATS=$(curl -s -H "Authorization: Bearer ${{ secrets.WAKATIME_API_KEY }}" \
+                  "https://hackatime.hackclub.com/api/hackatime/v1/users/current/stats/last_7_days")
           
-          # Create wakatime config file for Hackatime
-          cat > ~/.wakatime.cfg << EOF
-          [settings]
-          api_url = https://hackatime.hackclub.com/api/hackatime/v1
-          api_key = ${{ secrets.WAKATIME_API_KEY }}
-          heartbeat_rate_limit_seconds = 30
+          # Extract languages and create progress bars
+          python3 << 'EOF'
+          import json
+          import sys
+          import os
+          
+          # Read the API response
+          stats_json = os.environ.get('STATS', '{}')
+          try:
+              data = json.loads(stats_json)
+              languages = data.get('data', {}).get('languages', [])
+              
+              # Create language bars
+              print("### 💻 Most Used Coding Languages (last 7 days)")
+              print()
+              
+              for i, lang in enumerate(languages[:5]):  # Top 5 languages
+                  name = lang['name']
+                  percent = lang['percent']
+                  time_text = lang['text']
+                  
+                  # Create a simple progress bar
+                  filled = int(percent / 5)  # Scale to 20 chars max
+                  bar = '█' * filled + '░' * (20 - filled)
+                  
+                  print(f"{name:<12} {bar} {percent:5.1f}% ({time_text})")
+              
+          except Exception as e:
+              print("### 💻 Most Used Coding Languages (last 7 days)")
+              print()
+              print("*Unable to fetch coding stats*")
+              print(f"Error: {e}")
           EOF
           
-          # Try running markscribe with debug info
-          echo "Running markscribe..."
-          $HOME/go/bin/markscribe -write README.md README.template.md
+          # Generate base README and append stats
+          cp README.template.md temp_readme.md
+          
+          # Replace the placeholder with actual stats
+          python3 << 'EOF'
+          import json
+          import os
+          
+          # Read the API response
+          stats_json = os.environ.get('STATS', '{}')
+          
+          try:
+              data = json.loads(stats_json)
+              languages = data.get('data', {}).get('languages', [])
+              
+              # Create language bars
+              stats_content = "### 💻 Most Used Coding Languages (last 7 days)\n\n"
+              
+              for lang in languages[:5]:  # Top 5 languages
+                  name = lang['name']
+                  percent = lang['percent']
+                  time_text = lang['text']
+                  
+                  # Create a simple progress bar
+                  filled = int(percent / 5)  # Scale to 20 chars max
+                  bar = '█' * filled + '░' * (20 - filled)
+                  
+                  stats_content += f"{name:<12} `{bar}` {percent:5.1f}% ({time_text})\n"
+              
+              # Read template and replace placeholder
+              with open('temp_readme.md', 'r') as f:
+                  content = f.read()
+              
+              content = content.replace('### 💻 Most Used Coding Languages (last 7 days)\n\n*WakaTime stats will be added once API integration is resolved*', stats_content.strip())
+              
+              # Write final README
+              with open('README.md', 'w') as f:
+                  f.write(content)
+                  
+          except Exception as e:
+              # Fallback: just copy template
+              with open('temp_readme.md', 'r') as f:
+                  content = f.read()
+              with open('README.md', 'w') as f:
+                  f.write(content.replace('*WakaTime stats will be added once API integration is resolved*', '*Unable to fetch coding stats*'))
+          EOF
+          
+          rm temp_readme.md
 
       - name: Commit and Push if Changed
         run: |
