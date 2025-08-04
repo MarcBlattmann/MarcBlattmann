@@ -24,7 +24,7 @@ jobs:
         env:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
         run: |
-          $HOME/go/bin/markscribe -template README.template.md -output README.md
+          $HOME/go/bin/markscribe -write README.md README.template.md
 
       - name: Commit and Push if Changed
         run: |
