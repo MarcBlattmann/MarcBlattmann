@@ -7,7 +7,7 @@ Welcome to my GitHub! I'm passionate about creating intuitive, high-quality web 
 - 🇩🇪 **German** (Native)  
 - 🇬🇧 **English** (Fluent)
 
-### 💻 Most Used Coding Languages (last 7 days)
+### 🤯 What I did the last 7 days
 
 ```
 🔷 TypeScript   ■■■■■■■■■■■■■■■□□□□□ 77.8% (5 hrs 20 mins)
