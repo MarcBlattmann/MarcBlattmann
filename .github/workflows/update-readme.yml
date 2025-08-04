@@ -59,7 +59,7 @@ jobs:
                   time_text = lang['text']
                   
                   # Create a better looking progress bar
-                  filled = int(percent / 5)  # Scale to 20 chars max
+                  filled = int((percent / 100) * 20)  # Scale percentage to 20 chars max
                   empty = 20 - filled
                   bar = '█' * filled + '░' * empty
                   
