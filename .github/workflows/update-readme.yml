@@ -2,7 +2,7 @@ name: Update README
 
 on:
   schedule:
-    - cron: '0 * * * *'  # Every hour
+    - cron: '*/30 * * * *'  # Every 30 minutes
   workflow_dispatch:
 
 permissions:
@@ -85,7 +85,9 @@ jobs:
                   else:
                       emoji = '📄'
                   
-                  stats_content += f"{emoji} **{name}**{' ' * (12 - len(name))}▐{bar}▌ {percent:4.1f}% ({time_text})  \n"
+                  # Ensure consistent alignment by padding language name to 12 characters
+                  padded_name = f"{name:<12}"
+                  stats_content += f"{emoji} **{padded_name}** ▐{bar}▌ {percent:4.1f}% ({time_text})  \n"
               
               print("Generated stats content:")
               print(stats_content)
