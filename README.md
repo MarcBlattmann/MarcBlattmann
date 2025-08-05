@@ -6,7 +6,7 @@ Welcome to my GitHub! I'm passionate about creating intuitive, high-quality web 
 ### 🌍 Languages I Speak  
 - 🇩🇪 **German** (Native)  
 - 🇬🇧 **English** (Fluent)
-
+ dddd
 ### 🤯 What I did the last 7 days
 
 ```
