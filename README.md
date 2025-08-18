@@ -10,7 +10,7 @@ Welcome to my GitHub! I'm passionate about creating intuitive, high-quality web 
 ### 🤯 What I did the last 7 days
 
 ```
-🔷 TypeScript   ■■■■■■■■■■■■■■■■■■□□ 90.6% (6 hrs 40 mins)
+🔷 TypeScript   ■■■■■■■■■■■■■■■■■■□□ 90.5% (6 hrs 40 mins)
 📄 unknown      □□□□□□□□□□□□□□□□□□□□  3.0% (0 hrs 13 mins)
 🟨 JavaScript   □□□□□□□□□□□□□□□□□□□□  1.4% (0 hrs 6 mins)
 📄 PLAIN_TEXT   □□□□□□□□□□□□□□□□□□□□  0.9% (0 hrs 3 mins)
