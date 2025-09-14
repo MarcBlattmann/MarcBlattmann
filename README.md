@@ -7,7 +7,7 @@ Welcome to my GitHub! I'm passionate about creating intuitive, high-quality web 
 - 🇩🇪 **German** (Native)  
 - 🇬🇧 **English** (Fluent)
 
-### 🤯 What I did the last 7 days 
+### 🤯 What I did the last 7 days
 
 ```
 🔷 TypeScript   ■■■■■■■■■■■■■■□□□□□□ 74.1% (9 hrs 8 mins)
