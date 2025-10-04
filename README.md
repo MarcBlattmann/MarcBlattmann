@@ -7,12 +7,6 @@ Welcome to my GitHub! I'm passionate about creating intuitive, high-quality web 
 - 🇩🇪 **German** (Native)  
 - 🇬🇧 **English** (Fluent)
 
-### 🤯 What I did the last 7 days
+### 💻 Most Used Coding Languages (last 7 days)
 
-```
-🔷 TypeScript   ■■■■■■■■■■■■■■■□□□□□ 76.5% (11 hrs 13 mins)
-🔷 C#           ■□□□□□□□□□□□□□□□□□□□  9.9% (1 hrs 27 mins)
-📄 unknown      □□□□□□□□□□□□□□□□□□□□  2.6% (0 hrs 22 mins)
-📄 Bash         □□□□□□□□□□□□□□□□□□□□  2.1% (0 hrs 18 mins)
-📄 JSON         □□□□□□□□□□□□□□□□□□□□  1.7% (0 hrs 14 mins)
-```
+*Unable to fetch coding stats*
