@@ -6,13 +6,3 @@ Welcome to my GitHub! I'm passionate about creating intuitive, high-quality web 
 ### 🌍 Languages I Speak  
 - 🇩🇪 **German** (Native)  
 - 🇬🇧 **English** (Fluent)
-
-### 🤯 What I did the last 7 days
-
-```
-🔷 TypeScript   ■■■■■■■■■■■■□□□□□□□□ 63.2% (7 hrs 49 mins)
-🔷 C#           ■■□□□□□□□□□□□□□□□□□□ 14.3% (1 hrs 46 mins)
-📄 XAML         ■□□□□□□□□□□□□□□□□□□□  6.6% (0 hrs 48 mins)
-📄 unknown      □□□□□□□□□□□□□□□□□□□□  3.5% (0 hrs 26 mins)
-📄 Xaml         □□□□□□□□□□□□□□□□□□□□  2.8% (0 hrs 20 mins)
-```
